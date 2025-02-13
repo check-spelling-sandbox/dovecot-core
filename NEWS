@@ -3581,7 +3581,7 @@ v2.0.14 2011-08-29  Timo Sirainen <tss@iki.fi>
 	  MAIL FROM and RCPT TO.
 	- imap: FETCH BODY[HEADER.FIELDS (..)] may have crashed or not
 	  returned all data sometimes.
-	- ldap: Fixed random assert-crashing with with sasl_bind=yes.
+	- ldap: Fixed random assert-crashing with sasl_bind=yes.
 	- Fixes to handling mail chroots
 	- Fixed renaming mailboxes under different parent with FS layout when
 	  using separate ALT, INDEX or CONTROL paths.
