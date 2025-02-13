@@ -2467,7 +2467,7 @@ v2.2.24 2016-04-26  Timo Sirainen <tss@iki.fi>
 	+ doveadm user -e <value>: Print <value> with %variables expanded.
 	- Huge header lines could have caused Dovecot to use too much memory
 	  (depending on config and used IMAP commands). (Typically this would
-	  result in only the single user's process dying with out of memory
+	  result in only the single user's process dying with an out of memory
 	  due to reaching service { vsz_limit } - not a global DoS).
 	- dsync: Detect and handle invalid/stale -s state string better.
 	- dsync: Fixed crash caused by specific mailbox renames
