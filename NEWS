@@ -5735,7 +5735,7 @@ v0.99.0 2002-11-24  Timo Sirainen <tss@iki.fi>
 	- \* flag was missing from PERMANENTFLAGS.
 	- Comments inside <> mail addresses crashed.
 	- imap-login printed UTC timestamps to logfiles
-	- passwd-file wasn't reread the the file changed
+	- passwd-file wasn't reread the file changed
 	- PAM authentication was implemented wrong, which caused it to break
 	  with some PAM plugins.
 	- Lots of smaller fixes, mostly to do with reliability
