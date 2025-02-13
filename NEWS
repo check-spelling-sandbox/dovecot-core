@@ -4268,7 +4268,7 @@ No changes since v1.1.rc13. Below are the largest changes since v1.0:
 	+ IMAP SORT: Sort keys are indexed, which makes SORT commands faster.
 	+ When saving messages, update cache file immediately with the data
 	  that we expect client to fetch later.
-	+ NFS caches are are flushed whenever needed. See mail_nfs_storage and
+	+ NFS caches are flushed whenever needed. See mail_nfs_storage and
 	  mail_nfs_index settings.
 	+ Out of order command execution (SEARCH, FETCH, LIST), nonstandard
 	  command cancellation (X-CANCEL <tag>)
