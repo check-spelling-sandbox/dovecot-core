@@ -1,0 +1,259 @@
+# test-base32.c
+static void test_base32_encode(void)
+test_begin("base32_encode() with padding");
+
+# test-base32.c
+static void test_base32hex_encode(void)
+test_begin("base32hex_encode() with padding");
+
+# test-base32.c
+static void test_base32_decode(void)
+test_begin("base32_decode()");
+
+# test-lua-http-client.c
+static const char json_response[] =
+"}";
+
+# test-http-transfer.c
+valid_transfer_chunked_input_tests[] = {
+};
+
+# test-oauth2-jwt.c
+static void test_jwt_broken_token(void)
+};
+
+# test-mailbox-list.c
+const struct test_mailbox_list_name tests[] = {
+test_begin("mailbox list get names");
+
+# test-charset.c
+static void test_charset_iconv(void)
+};
+
+# test-rfc822-parser.c
+static void test_rfc822_parse_content_type(void)
+};
+
+# password-scheme-crypt.c
+/* keep in sync with the crypt_schemes struct below */
+};
+
+# test-istream-attachment.c
+define BINARY_TEXT_LONG
+define BINARY_TEXT_SHORT
+
+# test-message-snippet.c
+unsigned int max_snippet_chars;
+};
+
+# test-imap-utf7.c
+static void test_imap_utf7_by_example(void)
+};
+
+# test-message-header-decode.c
+static void test_message_header_decode(void)
+};
+
+# test-message-header-encode.c
+static void test_message_header_encode(void)
+test_begin("message header encode");
+
+# test-json-parser.c
+.input = "
+",
+
+# test-message-decoder.c
+static const char test_message_input[] =
+\n";
+
+# test-message-*.c
+static const char test_msg[] =
+"\n";
+
+# test-message-size.c
+static const char test_msg_with_nuls[] =
+"\n";
+
+# test-imap-url.c
+static const struct valid_imap_url_test valid_url_tests[] = {
+};
+
+# test-json-parser.c
+static const struct json_valid_parse_test
+};
+
+# test-json-parser.c
+/* Problems found by fuzzer */
+};
+
+# test-json-parser.c
+stream_parse_tests[] = {
+};
+
+# test-json-*io.c
+static const struct json_io_test
+};
+
+# test-qp-decoder.c
+/* Trailing whitespace */
+};
+
+# test-smtp-params.c
+static const struct valid_mail_params_parse_test
+};
+
+# test-smtp-params.c
+static const struct valid_rcpt_params_parse_test
+};
+
+# test-smtp-server-errors.c
+define _LONG_AUTH_LINE_DATA \
+struct _long_auth_line_client {
+
+# test-imap-url.c
+static const struct invalid_imap_url_test invalid_url_tests[] = {
+};
+
+# test-message-decoder.c
+static void test_message_decoder_charset(void)
+test_begin("message decoder charset");
+
+# test-lang-filter.c
+static void test_lang_filter_contractions_fr(void)
+};
+
+# test-lang-filter.c
+static void test_lang_filter_stopwords_no(void)
+test_begin("lang filter stopwords, Norwegian");
+
+# test-lang-filter.c
+static void test_lang_filter_stemmer_snowball_stem_french(void)
+test_begin("lang filter stem French");
+
+# test-lang-filter.c
+static void test_lang_filter_normalizer_swedish_short(void)
+test_begin("lang filter normalizer Swedish short text");
+
+# test-lang-filter.c
+static void test_lang_filter_normalizer_swedish_short_default_id(void)
+test_begin("lang filter normalizer Swedish short text using default ID");
+
+# test-lang-filter.c
+static void test_lang_filter_stopwords_normalizer_stemmer_no(void)
+test_begin("lang filters with stopwords, default normalizer and stemming chained, Norwegian");
+
+# test-lang-filter.c
+static void test_lang_filter_stopwords_normalizer_stemmer_sv(void)
+test_begin("lang filters with stopwords, default normalizer and stemming chained, Swedish");
+
+# test-language.c
+static void test_language_detect_finnish(void)
+test_begin("language detect Finnish");
+
+# test-language.c
+static void test_language_detect_french(void)
+test_begin("language detect French");
+
+# test-language.c
+static void test_language_detect_german(void)
+test_begin("language detect German");
+
+# test-language.c
+static void test_language_detect_swedish(void)
+test_begin("language detect Swedish");
+
+# test-language.c
+/* Detect Bokmal */
+test_begin("language detect Bokmal as Norwegian");
+
+# test-language.c
+static void test_language_detect_nynorsk(void)
+test_begin("language detect Nynorsk as Norwegian");
+
+# test-language.c
+static void test_language_detect_finnish_as_english(void)
+test_begin("language detect Finnish as English");
+
+# test-language.c
+/* Successfully detect, that Klingon is unknown. */
+test_begin("language detect unknown");
+
+# test-hash-method.c
+static void test_hash_methods_fips() {
+};
+
+# crypt-blowfish.h
+extern char *crypt_blowfish_rn(const char *key, const char *setting,
+char *output, size_t size);
+
+# crypt-blowfish.c
+char *crypt_blowfish_rn(const char *key, const char *setting,
+const char *test_hash = test_hashes[0];
+
+# test-lang-tokenizer.c
+define TEST_INPUT_ADDRESS \
+};
+
+# test-lang-tokenizer.c
+static void test_lang_tokenizer_address_parent(const char *name, struct lang_settings *set, enum lang_tokenizer_flags flags)
+};
+
+# test-lang-tokenizer.c
+static const char *const expected_output[] = {
+};
+
+# test-lang-tokenizer.c
+static const char *input =
+test_begin("lang tokenizer skip base64");
+
+# otp-dictionary.c
+static const struct word dictionary[2048] = {
+};
+
+# test-password-scheme.c
+static void test_password_schemes(void)
+int main(void)
+
+# test-mech.c
+static struct test_case tests[] = {
+test_auth_init();
+
+# test-solr-response.c
+static const struct solr_response_test tests[] = {
+};
+
+# test-qp-encoder.c
+static void test_qp_encoder(void)
+};
+
+# test-istream-base64-*.C
+static const struct base64_istream_test base64_tests[] = {
+static void
+
+# Public Keys
+-----BEGIN PUBLIC KEY-----
+-----END PUBLIC KEY-----
+
+# Private Keys
+-----BEGIN PRIVATE KEY-----
+-----END PRIVATE KEY-----
+
+# RSA Private Key
+-----BEGIN RSA PRIVATE KEY-----
+-----END RSA PRIVATE KEY-----
+
+# GPG Public Key
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+-----END PGP PUBLIC KEY BLOCK-----
+
+# GPG Signature
+-----BEGIN PGP SIGNATURE-----
+-----END PGP SIGNATURE-----
+
+# Certificates
+-----BEGIN CERTIFICATE-----
+-----END CERTIFICATE-----
+
+# All Contributors
+<!-- ALL-CONTRIBUTORS-LIST:START
+<!-- ALL-CONTRIBUTORS-LIST:END
