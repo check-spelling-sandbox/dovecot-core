@@ -5719,7 +5719,7 @@ v0.99.0 2002-11-24  Timo Sirainen <tss@iki.fi>
 	+ OpenSSL support.
 	+ Support for regenerating Diffie Hellman and RSA parameters with
 	  specified intervals. NOTE: currently doesn't work with OpenSSL.
-	+ Support for each login connection being handled in it's own process.
+	+ Support for each login connection being handled in its own process.
 	  This is the default as it's more safe especially with SSL.
 	+ mbox locking is now safe, other processes can't modify the mbox file
 	  while we're reading it.
