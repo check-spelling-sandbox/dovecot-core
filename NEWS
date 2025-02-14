@@ -1086,7 +1086,7 @@ v2.3.11 2020-06-17  Aki Tuomi <aki.tuomi@open-xchange.com>
 
 v2.3.10  2020-03-06  Aki Tuomi <aki.tuomi@open-xchange.com>
 
-	* Disable retpoline migitations by default. These can cause severe
+	* Disable retpoline mitigations by default. These can cause severe
 	  performance regressions, so they should be only enabled when
 	  applicable.
 	* IMAP MOVE now commits transactions in batches of 1000 mails. This
