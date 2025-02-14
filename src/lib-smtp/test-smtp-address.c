@@ -1163,7 +1163,7 @@ address_detail_parse_tests[] = {
 	  "address:another+delim", '-' },
 };
 
-unsigned int addresss_detail_parse_test_count =
+unsigned int address_detail_parse_test_count =
 	N_ELEMENTS(address_detail_parse_tests);
 
 static void test_smtp_address_detail_parse(void)
