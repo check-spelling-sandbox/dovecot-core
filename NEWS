@@ -3121,7 +3121,7 @@ v2.2.0 2013-04-11  Timo Sirainen <tss@iki.fi>
 
 v2.2.rc7 2013-04-10  Timo Sirainen <tss@iki.fi>
 
-	* checkpasword: AUTH_PASSWORD environment is no longer set.
+	* checkpassword: AUTH_PASSWORD environment is no longer set.
 	* Running dsync no longer triggers quota warnings.
 
 	+ dsync: Commit large transactions every 100 new messages, so if a
