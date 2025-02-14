@@ -1992,7 +1992,7 @@ v2.2.32 2017-08-24  Timo Sirainen <tss@iki.fi>
 	- quota-status service didn't support recipient_delimiter
 	- acl: Don't access dovecot-acl-list files with acl_globals_only=yes
 	- mail_location: If INDEX dir is set, mailbox deletion deletes its
-	  childrens' indexes. For example if "box" is deleted, "box/child"
+	  children's indexes. For example if "box" is deleted, "box/child"
 	  index directory was deleted as well (but mails were preserved).
 	- director: v2.2.31 caused rapid reconnection loops to directors
 	  that were down.
