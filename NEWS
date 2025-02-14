@@ -1242,7 +1242,7 @@ v2.3.9 2019-12-04  Aki Tuomi <aki.tuomi@open-xchange.com>
 	  clients that send MAIL and RCPT commands with additional spaces before
 	  the path and for clients that omit <> brackets around the path.
 	  See example-config/conf.d/20-lmtp.conf.
-	- lda/lmtp: Invalid MAIL FROM addresses were rejcted too aggressively.
+	- lda/lmtp: Invalid MAIL FROM addresses were rejected too aggressively.
 	  Now mails from addresses with unicode characters are delivered, but
 	  their Return-Path header will be <> instead of the given MAIL FROM
 	  address.
