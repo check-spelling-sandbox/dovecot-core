@@ -1633,7 +1633,7 @@ v2.3.1 2018-02-29  Aki Tuomi <aki.tuomi@dovecot.fi>
 	+ master: Support HAProxy PP2_TYPE_SSL command and set "secured"
 	  variable appropriately
 	- Invalid UCS4 escape in HTML can cause crashes
-	- imap: IMAP COMPRESS -enabled clietn crashes on disconnect
+	- imap: IMAP COMPRESS -enabled client crashes on disconnect
 	- lmtp: Fix crash when user is over quota
 	- lib-lda: Parsing Return-Path header address fails when it contains
 	  CFWS
