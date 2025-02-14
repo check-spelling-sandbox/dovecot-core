@@ -5294,7 +5294,7 @@ v1.0.beta8 2006-05-12  Timo Sirainen <tss@iki.fi>
 	- Lots of index handling fixes, especially with mmap_disable=yes
 	- Maildir: saving mails could have sometimes caused "Append with UID
 	  n, but next_uid = m" errors
-	- flock() locking never timeouted because ignoring SIGALRM caused the
+	- flock() locking never timed out because ignoring SIGALRM caused the
 	  system call just to be restarted when SIGALRM occurred (probably not
 	  with all OSes though?)
 	- kqueue: Fixed "Unrecognized event". Patch by Vaclav Haisman
