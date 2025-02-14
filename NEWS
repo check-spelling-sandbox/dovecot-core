@@ -120,7 +120,7 @@ v2.3.21 2023-09-15  Aki Tuomi <aki.tuomi@open-xchange.com>
 	- acl: When plugin was loaded \HasChildren and \HasNoChildren flags
 	  were calculated incorrectly for mailboxes containing '*' and '%'
 	  in their names.
-	- auth: Crash occured if a connection to PostgreSQL database server
+	- auth: Crash occurred if a connection to PostgreSQL database server
 	  failed during startup.
 	- auth: Logins with invalid passwords (e.g. unknown scheme) in passdb
 	  were failing with "password mismatch" instead of "internal error".
