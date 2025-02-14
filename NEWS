@@ -450,7 +450,7 @@ v2.3.18 2022-02-03  Aki Tuomi <aki.tuomi@open-xchange.com>
 
 v2.3.17.1 2021-12-07  Aki Tuomi <aki.tuomi@open-xchange.com>
 
-	- dsync: Add back accidentically removed parameters.
+	- dsync: Add back accidentally removed parameters.
 	- lib-ssl-iostream: Fix assert-crash when OpenSSL returned syscall error
 	  without errno.
 	- master: Dovecot failed to start if ssl_ca was too large.
