@@ -2828,7 +2828,7 @@ v2.2.13 2014-05-11  Timo Sirainen <tss@iki.fi>
 	  handshake was started but wasn't finished, the login process
 	  attempted to eventually forcibly disconnect the client, but failed
 	  to do it correctly. This could have left the connections hanging
-	  arond for a long time. (Affected Dovecot v1.1+)
+	  around for a long time. (Affected Dovecot v1.1+)
 
 	+ mdbox: Added mdbox_purge_preserve_alt setting to keep the file
 	  within alt storage during purge. (Should become enforced in v2.3.0?)
