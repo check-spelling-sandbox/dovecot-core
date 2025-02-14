@@ -253,7 +253,7 @@ const char *
 smtp_client_transaction_get_state_name(struct smtp_client_transaction *trans)
 	ATTR_PURE;
 const char *
-smtp_client_transaction_get_state_destription(
+smtp_client_transaction_get_state_description(
 	struct smtp_client_transaction *trans);
 
 #endif
