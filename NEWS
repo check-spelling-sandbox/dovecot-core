@@ -2331,7 +2331,7 @@ v2.2.26 2016-10-27  Timo Sirainen <tss@iki.fi>
 
 	- master process's listener socket was leaked to all child processes.
 	  This might have allowed untrusted processes to capture and prevent
-	  "doveadm service stop" comands from working.
+	  "doveadm service stop" commands from working.
 	- login proxy: Fixed crash when outgoing SSL connections were hanging.
 	- auth: userdb fields weren't passed to auth-workers, so %{userdb:*}
 	  from previous userdbs didn't work there.
