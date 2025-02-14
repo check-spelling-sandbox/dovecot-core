@@ -130,7 +130,7 @@ static void
 client_create_backend_default(struct client *client,
 			      const struct submission_settings *set)
 {
-	struct submision_backend_relay_settings relay_set;
+	struct submission_backend_relay_settings relay_set;
 
 	i_zero(&relay_set);
 	relay_set.my_hostname = set->hostname;

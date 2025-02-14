@@ -643,7 +643,7 @@ v2.3.15 2021-06-21  Aki Tuomi <aki.tuomi@open-xchange.com>
 	- *-login: Commands pipelined together with and just after the authenticate
 	  command cause these commands to be executed twice. This applies to all
 	  protocols that involve user login, which currently comprises of imap,
-	  pop3, submisision and managesieve.
+	  pop3, submission and managesieve.
 	- *-login: Processes are supposed to disconnect the oldest non-logged in
 	  connection when process_limit was reached. This didn't actually happen
 	  with the default "high-security mode" (with service_count=1) where each

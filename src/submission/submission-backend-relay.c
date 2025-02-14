@@ -1074,7 +1074,7 @@ backend_relay_cmd_quit(struct submission_backend *backend,
 struct submission_backend_relay *
 submission_backend_relay_create(
 	struct client *client,
-	const struct submision_backend_relay_settings *set)
+	const struct submission_backend_relay_settings *set)
 {
 	struct submission_backend_relay *rbackend;
 	struct mail_user *user = client->user;
