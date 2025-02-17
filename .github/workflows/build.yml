@@ -37,6 +37,10 @@ jobs:
     - name: make check
       run: make check $parallelism
       working-directory: /tmp/w
+    - name: shim permissions
+      run: |
+        : shim permissions
+        sudo chmod 0777 /usr/lib/systemd/system
     - name: make distcheck
       run: make distcheck $parallelism
       working-directory: /tmp/w
