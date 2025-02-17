@@ -14,6 +14,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: shorten paths
+      run: |
+        : shorten paths
+        cd /tmp
+        mv "$GITHUB_WORKSPACE" /tmp/w
+        mkdir -p "$GITHUB_WORKSPACE"
     - name: dependencies
       run: |
         : Install Dependencies
@@ -21,11 +27,16 @@ jobs:
         sudo apt-get install -y gettext
     - name: autogen
       run: ./autogen.sh
+      working-directory: /tmp/w
     - name: configure
       run: ./configure
+      working-directory: /tmp/w
     - name: make
       run: make $parallelism
+      working-directory: /tmp/w
     - name: make check
       run: make check $parallelism
+      working-directory: /tmp/w
     - name: make distcheck
       run: make distcheck $parallelism
+      working-directory: /tmp/w
