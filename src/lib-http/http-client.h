@@ -93,8 +93,8 @@ struct http_client_settings {
 
 	   if > 0, the maximum will be enforced across all IPs for that host,
 	   meaning that IPs may be tried more than once eventually if the number
-	   of IPs is smaller than the specified maximum attempts. If the number
-	   of IPs is higher than the maximum attempts, not all IPs are tried.
+	   of IPs is less than the specified maximum attempts. If the number
+	   of IPs is greater than the maximum attempts, not all IPs are tried.
 	   If 0, all IPs are tried at most once.
 	 */
 	unsigned int max_connect_attempts;
@@ -451,7 +451,7 @@ void http_client_request_submit(struct http_client_request *req);
 bool http_client_request_try_retry(struct http_client_request *req);
 
 /* Fail the request. This can also be used instead of submitting the request to
-   cause the request callback to be called later on with the spcified error. */
+   cause the request callback to be called later on with the specified error. */
 void http_client_request_error(struct http_client_request **req,
 			       unsigned int status, const char *error);
 /* Abort the request immediately. It may still linger for a while when it is
@@ -493,7 +493,7 @@ void http_client_request_start_tunnel(struct http_client_request *req,
    filled manually. */
 void http_client_settings_init(pool_t pool, struct http_client_settings *set_r);
 /* Create a client using the global shared client context. The parent event can
-   be overriden for specific requests with http_client_request_set_event(). */
+   be overridden for specific requests with http_client_request_set_event(). */
 struct http_client *http_client_init(const struct http_client_settings *set,
 				     struct event *event_parent);
 /* Same as http_client_init(), but pull settings automatically. */

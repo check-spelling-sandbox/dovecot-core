@@ -120,7 +120,7 @@ v2.3.21 2023-09-15  Aki Tuomi <aki.tuomi@open-xchange.com>
 	- acl: When plugin was loaded \HasChildren and \HasNoChildren flags
 	  were calculated incorrectly for mailboxes containing '*' and '%'
 	  in their names.
-	- auth: Crash occured if a connection to PostgreSQL database server
+	- auth: Crash occurred if a connection to PostgreSQL database server
 	  failed during startup.
 	- auth: Logins with invalid passwords (e.g. unknown scheme) in passdb
 	  were failing with "password mismatch" instead of "internal error".
@@ -450,7 +450,7 @@ v2.3.18 2022-02-03  Aki Tuomi <aki.tuomi@open-xchange.com>
 
 v2.3.17.1 2021-12-07  Aki Tuomi <aki.tuomi@open-xchange.com>
 
-	- dsync: Add back accidentically removed parameters.
+	- dsync: Add back accidentally removed parameters.
 	- lib-ssl-iostream: Fix assert-crash when OpenSSL returned syscall error
 	  without errno.
 	- master: Dovecot failed to start if ssl_ca was too large.
@@ -643,7 +643,7 @@ v2.3.15 2021-06-21  Aki Tuomi <aki.tuomi@open-xchange.com>
 	- *-login: Commands pipelined together with and just after the authenticate
 	  command cause these commands to be executed twice. This applies to all
 	  protocols that involve user login, which currently comprises of imap,
-	  pop3, submisision and managesieve.
+	  pop3, submission and managesieve.
 	- *-login: Processes are supposed to disconnect the oldest non-logged in
 	  connection when process_limit was reached. This didn't actually happen
 	  with the default "high-security mode" (with service_count=1) where each
@@ -1086,7 +1086,7 @@ v2.3.11 2020-06-17  Aki Tuomi <aki.tuomi@open-xchange.com>
 
 v2.3.10  2020-03-06  Aki Tuomi <aki.tuomi@open-xchange.com>
 
-	* Disable retpoline migitations by default. These can cause severe
+	* Disable retpoline mitigations by default. These can cause severe
 	  performance regressions, so they should be only enabled when
 	  applicable.
 	* IMAP MOVE now commits transactions in batches of 1000 mails. This
@@ -1242,7 +1242,7 @@ v2.3.9 2019-12-04  Aki Tuomi <aki.tuomi@open-xchange.com>
 	  clients that send MAIL and RCPT commands with additional spaces before
 	  the path and for clients that omit <> brackets around the path.
 	  See example-config/conf.d/20-lmtp.conf.
-	- lda/lmtp: Invalid MAIL FROM addresses were rejcted too aggressively.
+	- lda/lmtp: Invalid MAIL FROM addresses were rejected too aggressively.
 	  Now mails from addresses with unicode characters are delivered, but
 	  their Return-Path header will be <> instead of the given MAIL FROM
 	  address.
@@ -1633,7 +1633,7 @@ v2.3.1 2018-02-29  Aki Tuomi <aki.tuomi@dovecot.fi>
 	+ master: Support HAProxy PP2_TYPE_SSL command and set "secured"
 	  variable appropriately
 	- Invalid UCS4 escape in HTML can cause crashes
-	- imap: IMAP COMPRESS -enabled clietn crashes on disconnect
+	- imap: IMAP COMPRESS -enabled client crashes on disconnect
 	- lmtp: Fix crash when user is over quota
 	- lib-lda: Parsing Return-Path header address fails when it contains
 	  CFWS
@@ -1992,7 +1992,7 @@ v2.2.32 2017-08-24  Timo Sirainen <tss@iki.fi>
 	- quota-status service didn't support recipient_delimiter
 	- acl: Don't access dovecot-acl-list files with acl_globals_only=yes
 	- mail_location: If INDEX dir is set, mailbox deletion deletes its
-	  childrens' indexes. For example if "box" is deleted, "box/child"
+	  children's indexes. For example if "box" is deleted, "box/child"
 	  index directory was deleted as well (but mails were preserved).
 	- director: v2.2.31 caused rapid reconnection loops to directors
 	  that were down.
@@ -2331,7 +2331,7 @@ v2.2.26 2016-10-27  Timo Sirainen <tss@iki.fi>
 
 	- master process's listener socket was leaked to all child processes.
 	  This might have allowed untrusted processes to capture and prevent
-	  "doveadm service stop" comands from working.
+	  "doveadm service stop" commands from working.
 	- login proxy: Fixed crash when outgoing SSL connections were hanging.
 	- auth: userdb fields weren't passed to auth-workers, so %{userdb:*}
 	  from previous userdbs didn't work there.
@@ -2360,7 +2360,7 @@ v2.2.26 2016-10-27  Timo Sirainen <tss@iki.fi>
 	- zlib, IMAP BINARY: Fixed internal caching when accessing multiple
 	  newly created mails. They all had UID=0 and the next mail could have
 	  wrongly used the previously cached mail.
-	- doveadm stats reset wasn't reseting all the stats.
+	- doveadm stats reset wasn't resetting all the stats.
 	- auth_stats=yes: Don't update num_logins, since it doubles them when
 	  using with mail stats.
 	- quota count: Fixed deadlocks when updating vsize header.
@@ -2467,7 +2467,7 @@ v2.2.24 2016-04-26  Timo Sirainen <tss@iki.fi>
 	+ doveadm user -e <value>: Print <value> with %variables expanded.
 	- Huge header lines could have caused Dovecot to use too much memory
 	  (depending on config and used IMAP commands). (Typically this would
-	  result in only the single user's process dying with out of memory
+	  result in only the single user's process dying with an out of memory
 	  due to reaching service { vsz_limit } - not a global DoS).
 	- dsync: Detect and handle invalid/stale -s state string better.
 	- dsync: Fixed crash caused by specific mailbox renames
@@ -2590,7 +2590,7 @@ v2.2.19 2015-10-02  Timo Sirainen <tss@iki.fi>
 	+ Added a quota "count" backend, which uses the mailbox vsizes to get
 	  the current quota usage. It requires using the new quota_vsizes=yes
 	  setting, which tracks the messages' "virtual sizes" rather than
-	  "physical sizes". Their distiction is minor and mostly irrelevant
+	  "physical sizes". Their distinction is minor and mostly irrelevant
 	  nowadays (if mail sizes should be counted with LF or CRLF newlines).
 	+ "doveadm director up/down" commands added. The monitoring script
 	  should be using these commands instead of changing the vhost count.
@@ -2828,7 +2828,7 @@ v2.2.13 2014-05-11  Timo Sirainen <tss@iki.fi>
 	  handshake was started but wasn't finished, the login process
 	  attempted to eventually forcibly disconnect the client, but failed
 	  to do it correctly. This could have left the connections hanging
-	  arond for a long time. (Affected Dovecot v1.1+)
+	  around for a long time. (Affected Dovecot v1.1+)
 
 	+ mdbox: Added mdbox_purge_preserve_alt setting to keep the file
 	  within alt storage during purge. (Should become enforced in v2.3.0?)
@@ -3121,7 +3121,7 @@ v2.2.0 2013-04-11  Timo Sirainen <tss@iki.fi>
 
 v2.2.rc7 2013-04-10  Timo Sirainen <tss@iki.fi>
 
-	* checkpasword: AUTH_PASSWORD environment is no longer set.
+	* checkpassword: AUTH_PASSWORD environment is no longer set.
 	* Running dsync no longer triggers quota warnings.
 
 	+ dsync: Commit large transactions every 100 new messages, so if a
@@ -3140,7 +3140,7 @@ v2.2.rc6 2013-04-08  Timo Sirainen <tss@iki.fi>
 	  a user was just synced. This way the replicators are kept roughly
 	  in sync.
 	+ Added ssl_client_ca_file to specify the CA certs as a file. This is
-	  needed (instead of ssl_client_ca_dir) in RedHat-based systems.
+	  needed (instead of ssl_client_ca_dir) in Red Hat-based systems.
 	+ Added "doveadm fs" commands, mainly to debug lib-fs backends.
 	- Mailbox list indexes weren't using proper file permissions based
 	  on the root directory.
@@ -3397,7 +3397,7 @@ v2.1.0 2012-02-16  Timo Sirainen <tss@iki.fi>
 	* Plugins now use UTF-8 mailbox names rather than mUTF-7:
 	  acl, autocreate, expire, trash, virtual
 	* auth_username_format default changed to %Lu. If you really want
-	  case sensitive usernames, set it back to empty.
+	  case-sensitive usernames, set it back to empty.
 	* Solr full text search backend changed to use mailbox GUIDs instead of
 	  mailbox names, requiring reindexing everything. solr_old backend can
 	  be used with old indexes to avoid reindexing, but it doesn't support
@@ -3525,7 +3525,7 @@ v2.1.rc1 2011-11-24  Timo Sirainen <tss@iki.fi>
 	* Plugins now use UTF-8 mailbox names rather than mUTF-7:
 	  acl, autocreate, expire, trash, virtual
 	* auth_username_format default changed to %Lu. If you really want
-	  case sensitive usernames, set it back to empty.
+	  case-sensitive usernames, set it back to empty.
 	* Solr full text search backend changed to use mailbox GUIDs instead of
 	  mailbox names, requiring reindexing everything. solr_old backend can
 	  be used with old indexes to avoid reindexing, but it doesn't support
@@ -3581,7 +3581,7 @@ v2.0.14 2011-08-29  Timo Sirainen <tss@iki.fi>
 	  MAIL FROM and RCPT TO.
 	- imap: FETCH BODY[HEADER.FIELDS (..)] may have crashed or not
 	  returned all data sometimes.
-	- ldap: Fixed random assert-crashing with with sasl_bind=yes.
+	- ldap: Fixed random assert-crashing with sasl_bind=yes.
 	- Fixes to handling mail chroots
 	- Fixed renaming mailboxes under different parent with FS layout when
 	  using separate ALT, INDEX or CONTROL paths.
@@ -4268,7 +4268,7 @@ No changes since v1.1.rc13. Below are the largest changes since v1.0:
 	+ IMAP SORT: Sort keys are indexed, which makes SORT commands faster.
 	+ When saving messages, update cache file immediately with the data
 	  that we expect client to fetch later.
-	+ NFS caches are are flushed whenever needed. See mail_nfs_storage and
+	+ NFS caches are flushed whenever needed. See mail_nfs_storage and
 	  mail_nfs_index settings.
 	+ Out of order command execution (SEARCH, FETCH, LIST), nonstandard
 	  command cancellation (X-CANCEL <tag>)
@@ -4685,7 +4685,7 @@ v1.0.rc29 2007-03-28  Timo Sirainen <tss@iki.fi>
 	  delete existing auth sockets and break the running Dovecot
 	- If deliver failed too early it still returned exit code 89 instead
 	  of EX_TEMPFAIL.
-	- deliver: INBOX fallbacking with -n parameter wasn't working.
+	- deliver: INBOX fallback with -n parameter wasn't working.
 	- passdb passwd and shadow couldn't be used as master or deny databases
 	- IDLE: inotify didn't notice changes in mbox file
 	- If index file directory couldn't be created, disable indexes instead
@@ -4722,7 +4722,7 @@ v1.0.rc28 2007-03-23  Timo Sirainen <tss@iki.fi>
 	- Index view syncing fixes
 	- rc27 didn't compile with some non-GCC compilers
 	- vpopmail support didn't compile in rc27
-	- NFS check with chrooting broke home direcotry for the first login
+	- NFS check with chrooting broke home directory for the first login
 	- deliver: If user lookup returned "unknown user", it logged
 	  "BUG: Unexpected input"
 	- convert plugin didn't convert INBOX
@@ -5019,7 +5019,7 @@ v1.0.rc13 2006-11-08  Timo Sirainen <tss@iki.fi>
 v1.0.rc12 2006-11-05  Timo Sirainen <tss@iki.fi>
 
 	- rc11 didn't compile with some compilers
-	- default_mail_env fallbacking was broken with --exec-mail
+	- default_mail_env fallback was broken with --exec-mail
 
 v1.0.rc11 2006-11-05  Timo Sirainen <tss@iki.fi>
 
@@ -5146,7 +5146,7 @@ v1.0.rc6 2006-08-07  Timo Sirainen <tss@iki.fi>
 	- Fixes to login process handling, especially with
 	  login_process_per_connection=no.
 	- Back to the original SSL proxy code but with one small fix, which
-	  hopefully fixes the occational hangs with it
+	  hopefully fixes the occasional hangs with it
 	- Several fixes to handling LIST command more correctly.
 
 v1.0.rc5 2006-08-02  Timo Sirainen <tss@iki.fi>
@@ -5176,7 +5176,7 @@ v1.0.rc2 2006-07-04  Timo Sirainen <tss@iki.fi>
 	  checks. Now we just assume that the connection is secure if the
 	  local IP matches the remote IP address.
 	* SSL code rewrite which hopefully makes it work better than before.
-	  Seems to work correctly, but if you suddently have trouble with SSL
+	  Seems to work correctly, but if you suddenly have trouble with SSL
 	  connections this is likely the reason.
 
 	+ verbose_ssl=yes: Log also SSL alerts and BIO errors
@@ -5294,7 +5294,7 @@ v1.0.beta8 2006-05-12  Timo Sirainen <tss@iki.fi>
 	- Lots of index handling fixes, especially with mmap_disable=yes
 	- Maildir: saving mails could have sometimes caused "Append with UID
 	  n, but next_uid = m" errors
-	- flock() locking never timeouted because ignoring SIGALRM caused the
+	- flock() locking never timed out because ignoring SIGALRM caused the
 	  system call just to be restarted when SIGALRM occurred (probably not
 	  with all OSes though?)
 	- kqueue: Fixed "Unrecognized event". Patch by Vaclav Haisman
@@ -5487,7 +5487,7 @@ v0.99.9.1 2003-05-03  Timo Sirainen <tss@iki.fi>
 	- Didn't compile with OpenBSD.
 	- POP3 server crashed sometimes instead of printing error message.
 	- If cached IMAP envelope contained literals, SEARCHing in it wrote
-	  errors to log file. For example if subject contained highascii, '"'
+	  errors to log file. For example if subject contained high-ascii, '"'
 	  or '\' characters this happened.
 
 v0.99.9 2003-04-28  Timo Sirainen <tss@iki.fi>
@@ -5674,7 +5674,7 @@ v0.99.4 2002-12-01  Timo Sirainen <tss@iki.fi>
 	  parse the full command in one call, ie. network lags etc. triggered
 	  those bugs sometimes. This was the last "weird bug" I know of.
 	- Mbox indexes got broken when updating cached fields
-	- Fixed a few memory leaks and unneededly high memory usage while
+	- Fixed a few memory leaks and needlessly high memory usage while
 	  caching envelopes
 	- Fixes to searching from message body and header
 	- --with-ssldir didn't do anything and the default was empty
@@ -5719,7 +5719,7 @@ v0.99.0 2002-11-24  Timo Sirainen <tss@iki.fi>
 	+ OpenSSL support.
 	+ Support for regenerating Diffie Hellman and RSA parameters with
 	  specified intervals. NOTE: currently doesn't work with OpenSSL.
-	+ Support for each login connection being handled in it's own process.
+	+ Support for each login connection being handled in its own process.
 	  This is the default as it's more safe especially with SSL.
 	+ mbox locking is now safe, other processes can't modify the mbox file
 	  while we're reading it.
@@ -5735,7 +5735,7 @@ v0.99.0 2002-11-24  Timo Sirainen <tss@iki.fi>
 	- \* flag was missing from PERMANENTFLAGS.
 	- Comments inside <> mail addresses crashed.
 	- imap-login printed UTC timestamps to logfiles
-	- passwd-file wasn't reread the the file changed
+	- passwd-file wasn't reread the file changed
 	- PAM authentication was implemented wrong, which caused it to break
 	  with some PAM plugins.
 	- Lots of smaller fixes, mostly to do with reliability

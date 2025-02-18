@@ -845,7 +845,7 @@ smtp_client_transaction_timeout(struct smtp_client_transaction *trans)
 	smtp_reply_printf(
 		&reply, 451, "Remote server not answering "
 		"(transaction timed out while %s)",
-		smtp_client_transaction_get_state_destription(trans));
+		smtp_client_transaction_get_state_description(trans));
 	reply.enhanced_code = SMTP_REPLY_ENH_CODE(4, 4, 0);
 
 	smtp_client_transaction_fail_reply(trans, &reply);
@@ -968,7 +968,7 @@ smtp_client_transaction_connection_ready(struct smtp_client_transaction *trans)
 	if (trans->state != SMTP_CLIENT_TRANSACTION_STATE_PENDING)
 		return;
 
-	e_debug(trans->event, "Connecton is ready for transaction");
+	e_debug(trans->event, "Connection is ready for transaction");
 
 	trans->state = SMTP_CLIENT_TRANSACTION_STATE_MAIL_FROM;
 
@@ -1606,7 +1606,7 @@ smtp_client_transaction_get_state_name(struct smtp_client_transaction *trans)
 }
 
 const char *
-smtp_client_transaction_get_state_destription(
+smtp_client_transaction_get_state_description(
 	struct smtp_client_transaction *trans)
 {
 	enum smtp_client_connection_state conn_state;

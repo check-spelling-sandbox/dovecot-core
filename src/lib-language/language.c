@@ -12,8 +12,8 @@
 #endif
 
 #ifndef TEXTCAT_RESULT_UNKNOWN /* old textcat.h has typos */
-#  ifdef TEXTCAT_RESULT_UNKOWN
-#    define TEXTCAT_RESULT_UNKNOWN TEXTCAT_RESULT_UNKOWN
+#  ifdef TEXTCAT_RESULT_UNKNOWN
+#    define TEXTCAT_RESULT_UNKNOWN TEXTCAT_RESULT_UNKNOWN
 #  endif
 #endif
 

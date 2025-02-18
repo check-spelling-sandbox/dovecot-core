@@ -661,7 +661,7 @@ auth_lua_export_passdb_table(lua_State *L, struct auth_request *req,
 	if (ret != PASSDB_RESULT_OK) {
 		lua_pop(L, 2);
 		lua_gc(L, LUA_GCCOLLECT, 0);
-		*error_r = "passb failed";
+		*error_r = "passdb failed";
 		return ret;
 	}
 

@@ -111,7 +111,7 @@ enum json_parse_result {
 	/* Parsed to end of currently buffered data */
 	JSON_PARSE_NO_DATA = -4,
 	/* Prevent call stack overflow
-	  (to support arbitrarely deeply nested input) */
+	  (to support arbitrarily deeply nested input) */
 	JSON_PARSE_CALL_STACK_OVERFLOW = -3,
 	/* Encountered invalid/unexpected syntax */
 	JSON_PARSE_UNEXPECTED_EOF = -2,
@@ -1068,7 +1068,7 @@ json_parser_do_parse_literal(struct json_parser *parser,
 			if ((unichar_t)*p != ch) {
 				json_parser_error(
 					parser, "Expected value '%s', "
-					"but encounted '%s' + %s",
+					"but encountered '%s' + %s",
 					literal, t_strdup_until(literal, p),
 					json_parser_curchar_str(parser));
 				return JSON_PARSE_ERROR;
@@ -1345,7 +1345,7 @@ json_parser_parse_unicode_escape(struct json_parser *parser,
 			break;
 	}
 	if (ret == JSON_PARSE_NO_DATA) {
-		/* We already checked that 4 octets are available for for hex
+		/* We already checked that 4 octets are available for hex
 		   digits. The only thing that could have happened is that we
 		   encountered the beginnings of an UTF-8 character and no more
 		   input is available. Finish it at a deeper parse level that
@@ -1629,7 +1629,7 @@ json_parser_do_parse_string_value(struct json_parser *parser,
 	if (parser->str_stream == NULL &&
 	    parser->str_stream_max_buffer_size > 0 &&
 	    max_size > parser->str_stream_threshold) {
-		/* Return string stream immediately once the treshold is
+		/* Return string stream immediately once the threshold is
 		   crossed */
 		max_size = parser->str_stream_threshold;
 	}

@@ -160,7 +160,7 @@ static const struct discrete_test discrete_tests[] = {
 		  "metric/test/group_by/sub_name/method/discrete/method=discrete",
 		  NULL },
 		3,
-		{ "apple", "bannana", "orange", },
+		{ "apple", "banana", "orange", },
 		{ "pie", "yoghurt", "cobbler", },
 	},
 	{
@@ -228,7 +228,7 @@ test_stats_metrics_group_by_discrete_real(const struct discrete_test *test,
 
 	struct metric *const *first = array_idx(&root_metric->sub_metrics, 0);
 
-	/* examime each sub-metric */
+	/* examine each sub-metric */
 	for (i = 0; i < test->num_values; i++) {
 		test_stats_metrics_group_by_check_one(first[i],
 						      test->values_first[i],

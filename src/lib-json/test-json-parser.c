@@ -1400,7 +1400,7 @@ invalid_parse_tests[] = {
 		.input = "[\"\\",
 	},
 	{
-		// n_string_unescaped_crtl_char.json
+		// n_string_unescaped_ctrl_char.json
 		.input = "[\"a\x00a\"]",
 	},
 	{
@@ -2054,7 +2054,7 @@ invalid_parse_tests[] = {
 	},
 	{
 		// invalid/lone-second-surrogate/input
-		.input = "[\"\\uDFAA (second surrogate on it's own)\"]\n",
+		.input = "[\"\\uDFAA (second surrogate on its own)\"]\n",
 	},
 	{
 		// invalid/negative-integer-starting-with-zero/input
