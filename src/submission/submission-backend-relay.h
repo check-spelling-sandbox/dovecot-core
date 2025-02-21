@@ -9,7 +9,7 @@
 struct client;
 struct submission_backend_relay;
 
-struct submision_backend_relay_settings {
+struct submission_backend_relay_settings {
 	const char *my_hostname;
 
 	enum smtp_protocol protocol;
@@ -38,7 +38,7 @@ struct submision_backend_relay_settings {
 struct submission_backend_relay *
 submission_backend_relay_create(
 	struct client *client,
-	const struct submision_backend_relay_settings *set);
+	const struct submission_backend_relay_settings *set);
 
 /* Returns the base backend object for this relay backend */
 struct submission_backend *

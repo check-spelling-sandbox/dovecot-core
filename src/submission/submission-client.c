@@ -130,7 +130,7 @@ static void
 client_create_backend_default(struct client *client,
 			      const struct submission_settings *set)
 {
-	struct submision_backend_relay_settings relay_set;
+	struct submission_backend_relay_settings relay_set;
 
 	i_zero(&relay_set);
 	relay_set.my_hostname = set->hostname;
@@ -499,7 +499,7 @@ void client_add_extra_capability(struct client *client, const char *capability,
 {
 	struct client_extra_capability cap;
 
-	/* Don't add capabilties handled by lib-smtp here */
+	/* Don't add capabilities handled by lib-smtp here */
 	i_assert(smtp_capability_find_by_name(capability)
 		 == SMTP_CAPABILITY_NONE);
 

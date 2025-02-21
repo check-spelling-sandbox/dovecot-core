@@ -32,7 +32,7 @@ struct zlib_istream {
 	bool header_read:1;
 	bool trailer_read:1;
 	bool zs_closed:1;
-	bool starting_concated_output:1;
+	bool starting_concatenated_output:1;
 };
 
 static void i_stream_zlib_init(struct zlib_istream *zstream);
@@ -191,12 +191,12 @@ static ssize_t i_stream_zlib_read(struct istream_private *stream)
 			return -1;
 		}
 		/* Multiple gz streams concatenated together */
-		zstream->starting_concated_output = TRUE;
+		zstream->starting_concatenated_output = TRUE;
 	}
-	if (zstream->starting_concated_output) {
+	if (zstream->starting_concatenated_output) {
 		/* make sure there actually is something in parent stream.
 		   we don't want to reset the stream unless we actually see
-		   some concated output. */
+		   some concatenated output. */
 		ret = i_stream_read_more(stream->parent, &data, &size);
 		if (ret <= 0) {
 			if (ret == 0)
@@ -215,7 +215,7 @@ static ssize_t i_stream_zlib_read(struct istream_private *stream)
 		zstream->header_read = FALSE;
 		zstream->trailer_read = FALSE;
 		zstream->crc32 = 0;
-		zstream->starting_concated_output = FALSE;
+		zstream->starting_concatenated_output = FALSE;
 
 		(void)inflateEnd(&zstream->zs);
 		i_stream_zlib_init(zstream);
